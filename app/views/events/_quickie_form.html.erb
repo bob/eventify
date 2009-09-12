@@ -1,0 +1,11 @@
+<%= f.error_messages %>
+
+<%= f.select :priority, options_for_select(Event::PRIORITIES) %>
+<%= f.text_field :title %>
+<%= f.date_select :due %>
+
+<% if act == "new" %>
+	<%= f.submit 'Create' %>
+<% elsif act == "edit" %>                
+	<%= f.submit 'Update' %>
+<% end %>

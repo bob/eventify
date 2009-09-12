@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @event.user_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @event.title %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @event.priority %>
+</p>
+
+<p>
+  <b>Due:</b>
+  <%=h @event.due %>
+</p>
+
+<p>
+  <b>Done:</b>
+  <%=h @event.done %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @event.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%=h @event.updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,24 @@
+
+<h1>Listing events</h1>
+
+<h3>New event</h3>
+
+<div id="quickie_form">
+	<%= render :partial => "/events/quickie_new" %>
+</div>
+
+<div class="period_links">
+	<%= link_to_unless (current_page?(period_events_url("today")) or current_page?("/") or current_page?(events_path)), "Today", period_events_url("today") %>
+	
+	<%= link_to_unless_current "Week", period_events_url("week") %>
+	<%= link_to_unless_current "Month", period_events_url("month") %>
+	<%= link_to_unless_current "Year", period_events_url("year") %>
+</div>
+
+<div id="events_list">
+	<%= render :partial => "/events/list_item", :collection => @events %>
+</div>
+
+<br />
+
+<%#= link_to 'New event', new_event_path %>

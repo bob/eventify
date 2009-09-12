@@ -1,0 +1,45 @@
+Eventify
+========
+
+Eventify is a primitive events manager.
+
+
+Example
+=======
+
+- Create new Rails app
+
+rails myapp
+cd myapp
+
+
+- Install RSpec plugins if you do not have rspec and rspec-rails gems installed
+
+ruby script/plugin install git://github.com/dchelimsky/rspec.git
+ruby script/plugin install git://github.com/dchelimsky/rspec-rails.git
+ruby script/generate rspec
+
+
+- Install plugin
+
+script/plugin install git://github.com/bob/eventify.git
+rake eventify:sync
+rake db:migrate
+
+
+- Comment line in config/environment.rb due time should be local
+
+  # config.time_zone = 'UTC'
+
+
+- Run server
+
+script/server
+
+
+- Then run tests
+rake spec:rcov  
+spec spec --format html > doc/specs.html
+
+
+Copyright (c) 2009 Vadim Kalion, released under the MIT license

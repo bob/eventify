@@ -1,0 +1,16 @@
+<div id="event_<%= list_item.id %>"> 
+	<%= check_box_to_remote "cb_#{list_item.id}", value = "1", checked = (list_item.done), {:url => done_event_path(list_item)} %>       
+	
+	<% if list_item.done %>
+		<i>
+		<%=h (list_item.due) ? list_item.due.to_s(:local) : "-" %>			
+		<%= priority_title(list_item.priority) %>
+		<%= h(list_item.title) %>
+		</i>
+	<% else %>
+		<%=h (list_item.due) ? list_item.due.to_s(:local) : "-" %>
+		<%= priority_color(list_item.priority) %>
+		<span class="list_item_title"><%= link_to_remote(h(list_item.title), {:url => edit_event_path(list_item, :format => :js), :method => :get}, :title => "Edit item") %></span>
+	  <%= link_to('[X]', list_item, :confirm => 'Are you sure?', :method => :delete, :title => "Delete item") %>	
+	<% end %>
+</div>

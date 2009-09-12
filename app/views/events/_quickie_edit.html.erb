@@ -1,0 +1,4 @@
+<% remote_form_for(:event, :url => event_path(@event, :format => :js), :html => {:method => :put}, :update => {:failure => "event_#{@event.id}"}) do |f| %>
+	<%= render :partial => "/events/quickie_form", :locals => {:f => f, :act => "edit"} %>
+	<%= link_to_remote "Cancel", {:url => event_path(@event), :method => :get} %>
+<% end %>

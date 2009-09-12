@@ -1,0 +1,4 @@
+
+<% remote_form_for(:event, :url => create_quickie_events_path, :update => {:failure => "quickie_form"}) do |f| %>
+	<%= render :partial => "/events/quickie_form", :locals => {:f => f, :act => "new"} %>
+<% end %>

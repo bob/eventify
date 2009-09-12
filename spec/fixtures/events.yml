@@ -1,0 +1,38 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  priority: 2
+  due: <%= Date.today %>
+  done: false
+  created_at: 2009-09-08 12:30:01
+  updated_at: 2009-09-08 12:30:01
+
+two:
+  user_id: 1
+  title: MyString
+  priority: 1
+  due: <%= Date.today + 1 %>
+  done: false
+  created_at: <%= 5.hours.ago %>
+  updated_at: <%= 5.hours.ago %>
+
+three:
+  user_id: 1
+  title: MyString
+  priority: 3
+  due: <%= Date.today + 8 %>
+  done: false
+  created_at: 2009-09-08 12:30:01
+  updated_at: 2009-09-08 12:30:01
+
+four:
+  user_id: 1
+  title: MyString
+  priority: 1
+  due: <%= Date.today + 100 %>
+  done: false
+  created_at: 2009-09-08 12:30:01
+  updated_at: 2009-09-08 12:30:01
+
