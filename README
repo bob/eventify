@@ -37,7 +37,13 @@ rake db:migrate
 script/server
 
 
-- Then run tests
+- In browser
+
+http://localhost:3000/events
+
+
+- Run tests
+
 rake spec:rcov  
 spec spec --format html > doc/specs.html
 
